@@ -113,11 +113,29 @@ class ImageTiles extends React.Component {
 
     var wins = 0;
     var losses = 0;
+    var won = true;
 
-    var imgsClicked = Object.values(this.state.trackClicked);
+    let imgsClicked = Object.values(this.state.trackClicked);
     console.log("imgsClicked: ", imgsClicked)
 
-    var won = true;
+
+      for (let k = 0; k < imgsClicked.length ; k++) {
+        if (imgsClicked[k] > 0) {
+          losses++
+          alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
+          won = false;
+          break;
+        } else if (imgsClicked < 1) {
+          won = false;
+          console.log("carry on")
+        } else {
+          won = true;
+        }
+      }
+
+      if (won === true) {
+        alert("You win!")
+      }
 
     // for (k = imgsClicked.length; k > 0; k++) {
     //   if (imgsClicked[k] > 1) {
@@ -154,6 +172,8 @@ class ImageTiles extends React.Component {
       console.log("The new state is: ", this.state)
     })
   };
+
+
 
   render() {
     return this.state.pics.map((pic) => {
