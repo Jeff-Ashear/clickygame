@@ -106,10 +106,27 @@ class ImageTiles extends React.Component {
     let imgsClicked = Object.values(this.state.trackClicked);
     console.log("imgsClicked: ", imgsClicked);
 
+
+    
+
+      for (let k = 0; k < imgsClicked.length; k++) {
+        console.log("wtf man, ", imgsClicked)
+        if (imgsClicked[k] > 1) {
+          won = false;
+          losses++;
+          alert("wtf man");
+          break;
+        } else if (imgsClicked[k] < 1) {
+          console.log("Score: ", score);
+        } 
+      }
+
+    
+
      
 
 
-      // for (let k = 0; k < imgsClicked.length ; k++) {
+      // for (let k = 0; k < imgsClicked.length; k++) {
       //   if (imgsClicked[k] > 0) {
       //     losses++
       //     alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
@@ -144,11 +161,14 @@ class ImageTiles extends React.Component {
     trackClicked[id] = this.state.trackClicked[id] + 1
     this.setState({
       trackClicked: trackClicked
+
     }, () => {
       // this.state.pics.sort((a,b)=>{
       //   let rand = Math.random();
       //   return (rand > .50) ? 1 : (rand === 0) ? 0 : -1 ;
       // })
+      score++;
+      
       var picState = this.state.pics;
 
       var j, x, i;
@@ -161,16 +181,15 @@ class ImageTiles extends React.Component {
       }
       console.log("The new state is: ", this.state)
     })
-  };
+    // gameState();
 
-  for (let k = 0; k < imgsClicked.length; k++) {
-    console.log("wtf man: ", imgsClicked);
-    if (imgsClicked[k] > 1) {
-      console.log("seriously wtf: ", imgsClicked[k])
+    for (let k = 0; k < imgsClicked.length; k++) {
+      console.log("wtf man seriously: ", imgsClicked)
     }
-  }
-
-
+  };
+  
+  
+  
   render() {
     return this.state.pics.map((pic) => {
       return (
