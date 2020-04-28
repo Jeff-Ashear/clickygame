@@ -1,38 +1,38 @@
 import React from "react";
-// import one from "../images/one.jpg";
-// import two from "../images/two.jpg";
-// import three from "../images/three.jpg";
-// import four from "../images/four.jpg";
-import five from "../images/five.png";
-import six from "../images/six.png";
+import one from "../images/one.png";
+import two from "../images/two.jpg";
+import three from "../images/three.jpg";
+import four from "../images/four.jpg";
+import five from "../images/five.jpg";
+import six from "../images/six.jpg";
 import seven from "../images/seven.jpg";
 import eight from "../images/eight.jpg";
 import nine from "../images/nine.jpg";
 import ten from "../images/ten.jpg";
-// import eleven from "./images/eleven.jpg";
+import eleven from "../images/eleven.jpg";
 import twelve from "../images/twelve.jpg";
-import thirteen from "../images/thirteen.jpg";
-import fourteen from "../images/fourteen.jpg";
-import fifteen from "../images/fifteen.jpg";
+// import thirteen from "../images/thirteen.jpg";
+// import fourteen from "../images/fourteen.jpg";
+// import fifteen from "../images/fifteen.jpg";
 import "./style.css";
 
 class ImageTiles extends React.Component {
-  // one  = {
-  //   id: 1, 
-  //   img: one
-  // }
-  // two  = {
-  //   id: 2, 
-  //   img: two
-  // }
-  // three  = {
-  //   id: 3, 
-  //   img: three
-  // }
-  // four = {
-  //   id: 4, 
-  //   img: four
-  // }
+  one  = {
+    id: 1, 
+    img: one
+  }
+  two  = {
+    id: 2, 
+    img: two
+  }
+  three  = {
+    id: 3, 
+    img: three
+  }
+  four = {
+    id: 4, 
+    img: four
+  }
   five = {
     id: 5,
     img: five
@@ -57,30 +57,19 @@ class ImageTiles extends React.Component {
     id: 10,
     img: ten
   }
-  // eleven = {
-  //   id: 11, 
-  //   img: eleven
-  // }
+  eleven = {
+    id: 11, 
+    img: eleven
+  }
   twelve = {
     id: 12,
     img: twelve
   }
-  thirteen = {
-    id: 13,
-    img: thirteen
-  }
-  fourteen = {
-    id: 14,
-    img: fourteen
-  }
-  fifteen = {
-    id: 15,
-    img: fifteen
-  }
+
   state = {
     tagState: false,
     // this.one, this.two, this.three, this.four,
-    pics: [this.five, this.six, this.seven, this.eight, this.nine, this.ten, this.twelve, this.thirteen, this.fourteen, this.fifteen],
+    pics: [this.one, this.two, this.three, this.four, this.five, this.six, this.seven, this.eight, this.nine, this.ten, this.twelve],
     trackClicked: {
       1: 0,
       2: 0,
@@ -92,10 +81,7 @@ class ImageTiles extends React.Component {
       8: 0,
       9: 0,
       10: 0,
-      12: 0,
-      13: 0,
-      14: 0,
-      15: 0
+      12: 0
     }
   };
 
@@ -115,27 +101,27 @@ class ImageTiles extends React.Component {
     var losses = 0;
     var won = true;
 
-    let imgsClicked = Object.values(this.state.trackClicked);
-    console.log("imgsClicked: ", imgsClicked)
+    // let imgsClicked = Object.values(this.state.trackClicked);
+    // console.log("imgsClicked: ", imgsClicked)
 
 
-      for (let k = 0; k < imgsClicked.length ; k++) {
-        if (imgsClicked[k] > 0) {
-          losses++
-          alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
-          won = false;
-          break;
-        } else if (imgsClicked < 1) {
-          won = false;
-          console.log("carry on")
-        } else {
-          won = true;
-        }
-      }
+    //   for (let k = 0; k < imgsClicked.length ; k++) {
+    //     if (imgsClicked[k] > 0) {
+    //       losses++
+    //       alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
+    //       won = false;
+    //       break;
+    //     } else if (imgsClicked < 1) {
+    //       won = false;
+    //       console.log("carry on")
+    //     } else {
+    //       won = true;
+    //     }
+    //   }
 
-      if (won === true) {
-        alert("You win!")
-      }
+    //   if (won === true) {
+    //     alert("You win!")
+    //   }
 
     // for (k = imgsClicked.length; k > 0; k++) {
     //   if (imgsClicked[k] > 1) {
