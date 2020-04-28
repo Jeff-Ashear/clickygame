@@ -69,7 +69,7 @@ class ImageTiles extends React.Component {
   state = {
     tagState: false,
     // this.one, this.two, this.three, this.four,
-    pics: [this.one, this.two, this.three, this.four, this.five, this.six, this.seven, this.eight, this.nine, this.ten, this.twelve],
+    pics: [this.one, this.two, this.three, this.four, this.five, this.six, this.seven, this.eight, this.nine, this.ten, this.eleven, this.twelve],
     trackClicked: {
       1: 0,
       2: 0,
@@ -81,6 +81,7 @@ class ImageTiles extends React.Component {
       8: 0,
       9: 0,
       10: 0,
+      11: 0,
       12: 0
     }
   };
@@ -100,24 +101,27 @@ class ImageTiles extends React.Component {
     var wins = 0;
     var losses = 0;
     var won = true;
+    var score = 0;
 
-    // let imgsClicked = Object.values(this.state.trackClicked);
-    // console.log("imgsClicked: ", imgsClicked)
+    let imgsClicked = Object.values(this.state.trackClicked);
+    console.log("imgsClicked: ", imgsClicked);
+
+     
 
 
-    //   for (let k = 0; k < imgsClicked.length ; k++) {
-    //     if (imgsClicked[k] > 0) {
-    //       losses++
-    //       alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
-    //       won = false;
-    //       break;
-    //     } else if (imgsClicked < 1) {
-    //       won = false;
-    //       console.log("carry on")
-    //     } else {
-    //       won = true;
-    //     }
-    //   }
+      // for (let k = 0; k < imgsClicked.length ; k++) {
+      //   if (imgsClicked[k] > 0) {
+      //     losses++
+      //     alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
+      //     won = false;
+      //     break;
+      //   } else if (imgsClicked < 1) {
+      //     won = false;
+      //     console.log("carry on")
+      //   } else {
+      //     won = true;
+      //   }
+      // }
 
     //   if (won === true) {
     //     alert("You win!")
@@ -159,6 +163,12 @@ class ImageTiles extends React.Component {
     })
   };
 
+  for (let k = 0; k < imgsClicked.length; k++) {
+    console.log("wtf man: ", imgsClicked);
+    if (imgsClicked[k] > 1) {
+      console.log("seriously wtf: ", imgsClicked[k])
+    }
+  }
 
 
   render() {
