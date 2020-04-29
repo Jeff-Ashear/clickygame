@@ -101,25 +101,22 @@ class ImageTiles extends React.Component {
     var wins = 0;
     var losses = 0;
     var won = true;
-    let score = 0;
+    var score = 0;
 
     let imgsClicked = Object.values(this.state.trackClicked);
     console.log("imgsClicked: ", imgsClicked);
 
-
-    
-
-      // for (let k = 0; k < imgsClicked.length; k++) {
-      //   console.log("wtf man, ", imgsClicked)
-      //   if (imgsClicked[k] > 1) {
-      //     won = false;
-      //     losses++;
-      //     alert("wtf man");
-      //     break;
-      //   } else if (imgsClicked[k] < 1) {
-      //     console.log("Score: ", score);
-      //   } 
-      // }
+      for (let k = 0; k < imgsClicked.length; k++) {
+        console.log("wtf man, ", imgsClicked)
+        if (imgsClicked[k] > 1) {
+          won = false;
+          losses++;
+          alert("wtf man");
+          break;
+        } else if (imgsClicked[k] < 1) {
+          console.log("Score: ", score);
+        } 
+      }
 
     
 
@@ -160,14 +157,15 @@ class ImageTiles extends React.Component {
     let trackClicked = { ...this.state.trackClicked }
     trackClicked[id] = this.state.trackClicked[id] + 1
     this.setState({
-      trackClicked: trackClicked,
+      trackClicked: trackClicked
+
     }, () => {
       // this.state.pics.sort((a,b)=>{
       //   let rand = Math.random();
       //   return (rand > .50) ? 1 : (rand === 0) ? 0 : -1 ;
       // })
       score++;
-      console.log("score: ", score)
+      
       var picState = this.state.pics;
 
       var j, x, i;
@@ -179,18 +177,12 @@ class ImageTiles extends React.Component {
         picState[j] = x;
       }
       console.log("The new state is: ", this.state)
-      // for (var k = 0; k < this.state.tagState.trackClicked.length; k++) {
-      //   if (this.state.tagState.trackClick)
-      // }
+    })
+    // gameState();
 
-      if (this.state.tagState.trackClicked > 1) {
-        console.log("you Lose.")
-      }
-
-    });
-
-
-
+    for (let k = 0; k < imgsClicked.length; k++) {
+      console.log("wtf man seriously: ", imgsClicked)
+    }
   };
   
   
