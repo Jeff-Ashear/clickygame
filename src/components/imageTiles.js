@@ -16,21 +16,25 @@ import twelve from "../images/twelve.jpg";
 // import fifteen from "../images/fifteen.jpg";
 import "./style.css";
 
+let score = 0;
+let wins = 0;
+let losses = 0;
+
 class ImageTiles extends React.Component {
-  one  = {
-    id: 1, 
+  one = {
+    id: 1,
     img: one
   }
-  two  = {
-    id: 2, 
+  two = {
+    id: 2,
     img: two
   }
-  three  = {
-    id: 3, 
+  three = {
+    id: 3,
     img: three
   }
   four = {
-    id: 4, 
+    id: 4,
     img: four
   }
   five = {
@@ -58,7 +62,7 @@ class ImageTiles extends React.Component {
     img: ten
   }
   eleven = {
-    id: 11, 
+    id: 11,
     img: eleven
   }
   twelve = {
@@ -66,24 +70,31 @@ class ImageTiles extends React.Component {
     img: twelve
   }
 
+  // Object.keys => ['id', 'img']
+  // Object.values => [12, '../img_Path.jpg']
+
+  defaultTrackClicked = {
+
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+    11: 0,
+    12: 0
+
+  }
+
   state = {
     tagState: false,
     // this.one, this.two, this.three, this.four,
     pics: [this.one, this.two, this.three, this.four, this.five, this.six, this.seven, this.eight, this.nine, this.ten, this.eleven, this.twelve],
-    trackClicked: {
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-      6: 0,
-      7: 0,
-      8: 0,
-      9: 0,
-      10: 0,
-      11: 0,
-      12: 0
-    }
+    trackClicked: this.defaultTrackClicked
   };
 
   clickTheButton = ({ target }) => {
@@ -98,47 +109,45 @@ class ImageTiles extends React.Component {
     // outside of loop
     // if won == true => they won the game
 
-    var wins = 0;
-    var losses = 0;
-    var won = true;
-    let score = 0;
+
+
 
     let imgsClicked = Object.values(this.state.trackClicked);
     console.log("imgsClicked: ", imgsClicked);
 
 
-    
-
-      // for (let k = 0; k < imgsClicked.length; k++) {
-      //   console.log("wtf man, ", imgsClicked)
-      //   if (imgsClicked[k] > 1) {
-      //     won = false;
-      //     losses++;
-      //     alert("wtf man");
-      //     break;
-      //   } else if (imgsClicked[k] < 1) {
-      //     console.log("Score: ", score);
-      //   } 
-      // }
-
-    
-
-     
 
 
-      // for (let k = 0; k < imgsClicked.length; k++) {
-      //   if (imgsClicked[k] > 0) {
-      //     losses++
-      //     alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
-      //     won = false;
-      //     break;
-      //   } else if (imgsClicked < 1) {
-      //     won = false;
-      //     console.log("carry on")
-      //   } else {
-      //     won = true;
-      //   }
-      // }
+    // for (let k = 0; k < imgsClicked.length; k++) {
+    //   console.log("wtf man, ", imgsClicked)
+    //   if (imgsClicked[k] > 1) {
+    //     won = false;
+    //     losses++;
+    //     alert("wtf man");
+    //     break;
+    //   } else if (imgsClicked[k] < 1) {
+    //     console.log("Score: ", score);
+    //   } 
+    // }
+
+
+
+
+
+
+    // for (let k = 0; k < imgsClicked.length; k++) {
+    //   if (imgsClicked[k] > 0) {
+    //     losses++
+    //     alert("Sorry you lose. You've won " + wins + " rounds and lost " + losses + ".");
+    //     won = false;
+    //     break;
+    //   } else if (imgsClicked < 1) {
+    //     won = false;
+    //     console.log("carry on")
+    //   } else {
+    //     won = true;
+    //   }
+    // }
 
     //   if (won === true) {
     //     alert("You win!")
@@ -166,8 +175,7 @@ class ImageTiles extends React.Component {
       //   let rand = Math.random();
       //   return (rand > .50) ? 1 : (rand === 0) ? 0 : -1 ;
       // })
-      score++;
-      console.log("score: ", score)
+
       var picState = this.state.pics;
 
       var j, x, i;
@@ -178,19 +186,57 @@ class ImageTiles extends React.Component {
         picState[i] = picState[j]; // change the value
         picState[j] = x;
       }
+
+      trackClicked = this.state.trackClicked;
+      let lost = false;
+      let won = true;
+
+      for (i = 0; i < Object.keys(trackClicked).length; i++) {
+        if (Object.values(trackClicked)[i] > 1) {
+          // they loose here....
+          lost = true;
+          console.log('You Lose.');
+        }
+
+        if (Object.values(trackClicked)[i] != 1) {
+          won = false;
+        }
+      }
+
+      if (lost) {
+        losses++;
+        score = 0;
+        this.setState({ trackClicked: this.defaultTrackClicked });
+        // reset trackedClicked state
+      } else {
+        score++;
+        console.log("score: ", score)
+      }
+
+      if (won) {
+        console.log('YOU WON');
+        console.log('score: ', score);
+        wins++;
+        score = 0;
+        this.setState({ trackClicked: this.defaulTrackClicked });
+        // reset trackedClicked state
+      }
+
+
+
       console.log("The new state is: ", this.state)
       // for (var k = 0; k < this.state.tagState.trackClicked.length; k++) {
       //   if (this.state.tagState.trackClick)
       // }
-      
+
       // for (k = imgsClicked.length; k > 0; k++) {
-    //   if (imgsClicked[k] > 1) {
-    //     console.log("You lose man.");
-    //     losses++;
-    //     console.log("Wins: ", wins);
-    //     console.log("Losses: ", losses)
-    //   }
-    // }
+      //   if (imgsClicked[k] > 1) {
+      //     console.log("You lose man.");
+      //     losses++;
+      //     console.log("Wins: ", wins);
+      //     console.log("Losses: ", losses)
+      //   }
+      // }
 
 
 
@@ -204,22 +250,32 @@ class ImageTiles extends React.Component {
 
 
   };
-  
-  
-  
+
+
+
   render() {
-    return this.state.pics.map((pic) => {
-      return (
-        <img
-          id={pic.id}
-          key={pic.id}
-          src={pic.img}
-          className=""
-          alt="logo"
-          onClick={this.clickTheButton}
-        />
-      );
-    });
+    return (
+      <div>
+        <p>Wins: {wins} </p>
+          <p>Losses: {losses} </p>
+          <p>Score: {score} </p>
+          <div className="row">
+          {this.state.pics.map((pic) => {
+            return (
+              <div key={pic.id} className="col-3">
+                <img
+                  id={pic.id}
+                  src={pic.img}
+                  className=""
+                  alt="logo"
+                  onClick={this.clickTheButton}
+                />
+              </div>
+            );
+          })}
+          </div>
+      </div>
+    );
   }
 }
 
