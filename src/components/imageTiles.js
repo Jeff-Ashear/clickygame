@@ -182,6 +182,18 @@ class ImageTiles extends React.Component {
       // for (var k = 0; k < this.state.tagState.trackClicked.length; k++) {
       //   if (this.state.tagState.trackClick)
       // }
+      
+      // for (k = imgsClicked.length; k > 0; k++) {
+    //   if (imgsClicked[k] > 1) {
+    //     console.log("You lose man.");
+    //     losses++;
+    //     console.log("Wins: ", wins);
+    //     console.log("Losses: ", losses)
+    //   }
+    // }
+
+
+
 
       if (this.state.tagState.trackClicked > 1) {
         console.log("you Lose.")
