@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/clickygame/static/css/main.c1cfeb68.chunk.css",
-    "main.js": "/clickygame/static/js/main.cb275442.chunk.js",
-    "main.js.map": "/clickygame/static/js/main.cb275442.chunk.js.map",
+    "main.css": "/clickygame/static/css/main.f7f8d4ef.chunk.css",
+    "main.js": "/clickygame/static/js/main.578f1f20.chunk.js",
+    "main.js.map": "/clickygame/static/js/main.578f1f20.chunk.js.map",
     "runtime-main.js": "/clickygame/static/js/runtime-main.8918f080.js",
     "runtime-main.js.map": "/clickygame/static/js/runtime-main.8918f080.js.map",
     "static/js/2.dfce1598.chunk.js": "/clickygame/static/js/2.dfce1598.chunk.js",
     "static/js/2.dfce1598.chunk.js.map": "/clickygame/static/js/2.dfce1598.chunk.js.map",
     "index.html": "/clickygame/index.html",
-    "precache-manifest.e957501053c990335e74f2aa7670c1c0.js": "/clickygame/precache-manifest.e957501053c990335e74f2aa7670c1c0.js",
+    "precache-manifest.c6b7fac73ae5906d277bef2bbe035f79.js": "/clickygame/precache-manifest.c6b7fac73ae5906d277bef2bbe035f79.js",
     "service-worker.js": "/clickygame/service-worker.js",
-    "static/css/main.c1cfeb68.chunk.css.map": "/clickygame/static/css/main.c1cfeb68.chunk.css.map",
+    "static/css/main.f7f8d4ef.chunk.css.map": "/clickygame/static/css/main.f7f8d4ef.chunk.css.map",
     "static/js/2.dfce1598.chunk.js.LICENSE.txt": "/clickygame/static/js/2.dfce1598.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/clickygame/static/media/fungus2.5e590eac.jpg",
     "static/media/eight.jpg": "/clickygame/static/media/eight.b4dad123.jpg",
     "static/media/eleven.jpg": "/clickygame/static/media/eleven.ad93c3ff.jpg",
     "static/media/five.jpg": "/clickygame/static/media/five.a26ff157.jpg",
@@ -28,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.8918f080.js",
     "static/js/2.dfce1598.chunk.js",
-    "static/css/main.c1cfeb68.chunk.css",
-    "static/js/main.cb275442.chunk.js"
+    "static/css/main.f7f8d4ef.chunk.css",
+    "static/js/main.578f1f20.chunk.js"
   ]
 }

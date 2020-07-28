@@ -256,10 +256,15 @@ class ImageTiles extends React.Component {
   render() {
     return (
       <div>
-        <p>Wins: {wins} </p>
-          <p>Losses: {losses} </p>
-          <p>Score: {score} </p>
-          <div className="row">
+        <header>
+          <h1 className="inst">Robots vs Aliens!</h1>
+          <h3 className="inst">Click each tile exactly once and you win.  Click any image twice and you lose.</h3><br></br>
+          <h2 className="score" id="wins">Wins: {wins} </h2>
+          <h2 className="score"id="score">Score: {score} </h2>
+          <h2 className="score" id="losses">Losses: {losses} </h2>
+
+        </header>
+        <div className="row">
           {this.state.pics.map((pic) => {
             return (
               <div key={pic.id} className="col-3">
@@ -273,7 +278,7 @@ class ImageTiles extends React.Component {
               </div>
             );
           })}
-          </div>
+        </div>
       </div>
     );
   }

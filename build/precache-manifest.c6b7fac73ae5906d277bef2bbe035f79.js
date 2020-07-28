@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80833dd59eb58a3015e00ca67d5ae190",
+    "revision": "111189cebefbe5e21980541ffef86341",
     "url": "/clickygame/index.html"
   },
   {
-    "revision": "73231c471581a78f3f25",
-    "url": "/clickygame/static/css/main.c1cfeb68.chunk.css"
+    "revision": "b5e88fa7d4639132ef5d",
+    "url": "/clickygame/static/css/main.f7f8d4ef.chunk.css"
   },
   {
     "revision": "61f7a1a735d7cd32fec7",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clickygame/static/js/2.dfce1598.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "73231c471581a78f3f25",
-    "url": "/clickygame/static/js/main.cb275442.chunk.js"
+    "revision": "b5e88fa7d4639132ef5d",
+    "url": "/clickygame/static/js/main.578f1f20.chunk.js"
   },
   {
     "revision": "c798aa2c017665a2cf0e",
     "url": "/clickygame/static/js/runtime-main.8918f080.js"
+  },
+  {
+    "revision": "5cfb6a2d2db76b668262b7e39f1a0e72",
+    "url": "/clickygame/static/media/Circuit-tile.5cfb6a2d.jpg"
   },
   {
     "revision": "b4dad1232adc92ebf24157b15180d1e7",
@@ -38,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "618059c547d5bf5a6bf8950e1f54d879",
     "url": "/clickygame/static/media/four.618059c5.jpg"
+  },
+  {
+    "revision": "5e590eac02b98b3d0fa66bc13728dd25",
+    "url": "/clickygame/static/media/fungus2.5e590eac.jpg"
   },
   {
     "revision": "7a6b1d4f1e7c122fec2f7b7e0c72d2b1",
