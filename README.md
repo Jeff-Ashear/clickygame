@@ -1,26 +1,29 @@
-# clickygame
+# Thanks for checking out Robots vs Aliens!
 Game to learn react, components, component state management, and handling user events.
+
+Portfolio:
+
+    https://tinyurl.com/jeff-ashear-portfolio
+
+![Welcome](./client/src/images/clickyGame.jpg)
 
 
 Relevant links: 
 
 Deployed:
 
-    https://jeff-ashear.github.io/clickygame/
+    https://tinyurl.com/clicky-game
 
 Code Repo:
 
-    https://github.com/Jeff-Ashear/clickygame.git
+    https://tinyurl.com/clicky-game-repo
 
-Portfolio:
-
-    https://jeff-ashear.github.io/UpdatedPortfolio/
 
 
 
 1. The purpose of this app:
 
-         ...is to provide a simple memory game for the user.  The user will gain points and eventually win by clicking on all of the moving images, without clicking any one image more than once.
+         ...is to provide a simple memory game for the user that demonstrates facility with react.js state usage.
 
 
 2. This app is organized in the React app variant of MCV architecture,with the exception of the absence of routes:
