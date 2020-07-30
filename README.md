@@ -1,5 +1,5 @@
 # Thanks for checking out Robots vs Aliens!
-Game to learn react, components, component state management, and handling user events.
+A simple tile-clicking memory game to demonstrate usage of react.js, components, component state management, and handling user events.
 
 Portfolio:
 
@@ -10,13 +10,11 @@ Portfolio:
 
 Relevant links: 
 
-Deployed:
+        Deployed:
+        https://tinyurl.com/clicky-game
 
-    https://tinyurl.com/clicky-game
-
-Code Repo:
-
-    https://tinyurl.com/clicky-game-repo
+        Code Repo:
+        https://tinyurl.com/clicky-game-repo
 
 
 
@@ -32,23 +30,27 @@ Code Repo:
 
 3. How to use this app:
 
-        Load the page and you're ready to play.  The goal is to click each image exactly one time.  Each time an image is clicked for the first time, all images will rearrange themselves on the page and your score will increase by one point.  If you reach 12 points you win!  If you click any image a second time you lose.  You may instantly start playing again after either game-over condition occurs.
+        A. Click the link to the deployed project and you're ready to play.  
+        B. Alternatively you can also clone or download the repo and open in your code editor of choice.
+            Open your terminal and run the following command in the clickygame folder: "npm install"
+            Then enter the command: "npm start"
+        C.The goal is to click each image exactly one time.  Each time an image is clicked for the first time, all images will rearrange themselves on the page and your score will increase by one point.  If you reach 12 points you win!  If you click any image a second time you lose.  You may instantly start playing again after either game-over condition occurs.
+        
 
-4.  Video of this app in use has yet to be made.
+4.  Video of this app in use is coming soon!
 
 5. Relevant links:
 
-Deployed:
+Relevant links: 
 
-    https://jeff-ashear.github.io/clickygame/
+        Deployed:
+        https://tinyurl.com/clicky-game
 
-Code Repo:
+        Code Repo:
+        https://tinyurl.com/clicky-game-repo
 
-    https://github.com/Jeff-Ashear/clickygame.git
-
-Portfolio:
-
-    https://jeff-ashear.github.io/UpdatedPortfolio/
+        Portfolio:
+        https://tinyurl.com/jeff-ashear-portfolio
 
 
 6. Technologies used in this project:
