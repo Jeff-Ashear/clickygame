@@ -5,7 +5,7 @@ Portfolio:
 
     https://tinyurl.com/jeff-ashear-portfolio
 
-![Welcome](./client/src/images/clickyGame.jpg)
+![Welcome](./src/images/clickyGame.jpg)
 
 
 Relevant links: 
