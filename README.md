@@ -3,7 +3,7 @@ A simple tile-clicking memory game to demonstrate usage of react.js, components,
 
 Portfolio:
 
-    https://tinyurl.com/jeff-ashear-portfolio
+    https://tinyurl.com/jeffashear
 
 ![Welcome](./src/images/clickyGame.jpg)
 
